@@ -4,8 +4,8 @@
   "main": "src/index.ts",
   "compatibility_date": "2025-07-03",
   "vars": {
-    "DATABASE_URL" : "",
-    "secret" : ""
+    "DATABASE_URL" : "prisma+postgres://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiMDFKWjg1Uk1ISDBIRUs3WjE0NzhRWllYREsiLCJ0ZW5hbnRfaWQiOiJjMDMzMTExMDI3ZDVmOWEwNjhlMzFmM2Q3YTRjMTkyOTNmYTgzMGI5NzYzZGNjNzI3MzVhYmM5OWI2Y2M5MmEzIiwiaW50ZXJuYWxfc2VjcmV0IjoiNzBiNTExODAtYjhjYy00ZmNhLWIyNzQtODA1ZTFjNjA4OWU0In0.6k_hQ4ehrYzOWWySDNJse6XXNYFpHXvjXitdT1gz1Gs",
+    "secret" : "91ac66d4df84b5291fb89ce029b6a3cd33a7eea9db3fe015ffde9fdaf206d560"
   }
   // Other options remain commented out
 }

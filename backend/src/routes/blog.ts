@@ -15,15 +15,23 @@ export const blogRouter = new Hono<{
 }>();
 
 blogRouter.use('/*', async (c, next) => {
-  const auth = c.req.header('Authorization') || "";
-  const token = auth.split(" ")[1];
-  const verifyResult = await verify(token, c.env.secret);
-
-  if (verifyResult.id) {
-    c.set("userId", verifyResult.id as string);
-    await next();
-  } else {
-    return c.json({ message: "Not found correct authorization header" }, 400);
+  const auth = c.req.header('Authorization');
+  
+  if (!auth) {
+    return c.json({ message: "Authorization header is required" }, 401);
+  }
+  
+  try {
+    const verifyResult = await verify(auth, c.env.secret);
+    if (verifyResult.id) {
+      c.set("userId", verifyResult.id as string);
+      await next();
+    } else {
+      return c.json({ message: "Invalid token" }, 401);
+    }
+  } catch (error) {
+    console.log("Token verification error:", error);
+    return c.json({ message: "Invalid token" }, 401);
   }
 });
 
@@ -36,6 +44,16 @@ blogRouter.get('/:id', async (c) => {
   const blog = await prisma.post.findFirst({
     where: {
       id: id
+    },
+    select: {
+        id: true,
+        title: true,
+        content : true,
+        author: {
+            select : {
+                name: true
+            }
+        }
     }
   });
 
