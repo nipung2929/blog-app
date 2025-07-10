@@ -5,6 +5,7 @@ import { type ChangeEvent, useState } from "react";
 import { AppBar } from "../components/AppBar";
 import { BACKEND_URL } from "../../config";
 
+
 export const Publish = () => {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
@@ -34,6 +35,8 @@ export const Publish = () => {
                 }} type="submit" className="mt-4 inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-500 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800">
                     Publish post
                 </button>
+
+               
             </div>
         </div>
     </div>
