@@ -1,1 +1,10 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+@font-face {
+    font-family: playflair;
+    src: ("../fonts/PlayfairDisplay-VariableFont_wght.ttf");
+}
+
+@theme{
+    --font-playflair: playflair, "sans-serif"
+}
