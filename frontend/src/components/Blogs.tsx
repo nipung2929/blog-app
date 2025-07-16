@@ -27,7 +27,6 @@ export const Blogs = () => {
         title= {blog.title}
         content= {blog.content}
         id= {blog.id}
-        publishedDate= {"2nd Feb, 2005"}
         />)}
     </div>
 
