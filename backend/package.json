@@ -9,12 +9,14 @@
     "@nipung2929/medium": "^1.0.0",
     "@prisma/client": "^6.11.0",
     "@prisma/extension-accelerate": "^2.0.1",
+    "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
     "hono": "^4.8.3",
     "json-web-token": "^3.2.0",
     "prisma": "^6.11.0"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "wrangler": "^4.4.0"
   }
 }
